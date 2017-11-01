@@ -10,22 +10,47 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DataProvider {
 
-  myData = {
-      "listItems": [
-          {listName:    "milk"},
-          {listName:    "buttermilk"},
-          {listName:    "coconut"},
-          {listName:    "butt butter"},
-      ]
-  };
+  animeLists: any = [
+          {
+              animeListHeaders: "Action",
+              animeListItems: [
+                  {animeListItem: "Fullmetal Alchemist"},
+                  {animeListItem: "Naruto"},
+                  {animeListItem: "Cowboy Bebop"},
+                  {animeListItem: "Bleach"},
+                  {animeListItem: "Samurai Champloo"}
+              ]
+          },
+
+          {
+              animeListHeaders: "Mecha",
+              animeListItems: [
+                  {animeListItem: "Gurren Lagann"},
+                  {animeListItem: "Neon Genesis Evangelion"},
+                  {animeListItem: "Code Geass"},
+                  {animeListItem: "Gundam SEED"},
+                  {animeListItem: "Macross"}
+              ]
+          },
+
+          {
+              animeListHeaders: "Romance",
+              animeListItems: [
+                  {animeListItem: "The Irregulars ar Magic High School"},
+                  {animeListItem: "Chobits"},
+                  {animeListItem: "Btooom!"},
+                  {animeListItem: "Ai Yori Aoshi"},
+                  {animeListItem: "Durarara!!"}
+              ]
+          }
+      ];
 
   constructor() {
     console.log('Hello DataProvider Provider');
   }
 
-
-  getData():Object {
-    return this.myData.listItems;
-  }
+    // getData():Object {
+    //     return this.animeLists.animeListItems;
+    // }
 
 }

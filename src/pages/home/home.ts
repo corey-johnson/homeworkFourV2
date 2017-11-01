@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import {DataProvider} from "../../providers/data/data";
+import { NavController} from "ionic-angular"
+import { DataProvider} from "../../providers/data/data";
 
 @Component({
   selector: 'page-home',
@@ -8,13 +8,18 @@ import {DataProvider} from "../../providers/data/data";
 })
 export class HomePage {
 
-  items = {};
+    animeLists: any;
 
   constructor(public navCtrl: NavController, public dataService: DataProvider) {
 
-    this.items = this.dataService.getData();
-    console.log(this.items);
 
-  }
+      }
+
+    ionViewDidLoad() {
+        this.animeLists = this.dataService.animeLists;
+
+
+      // this.animeLists = this.dataService.animeLists;
+    }
 
 }

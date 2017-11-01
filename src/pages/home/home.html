@@ -1,17 +1,19 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Oop
+      Anime List
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-list>
-    <ion-list-header></ion-list-header>
-    <ion-item *ngFor = "let item of items">
-      {{item.listName}}
+  <ion-list *ngFor = "let list of animeLists">
+    <ion-list-header>
+      {{list.animeListHeaders}}
+    </ion-list-header>
+    <ion-item *ngFor = "let item of list.animeListItems">
+      {{item.animeListItem}}
     </ion-item>
   </ion-list>
 
